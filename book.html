@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Juice Automotive | Get a Free Quote</title>
+  <meta name="description" content="Request a free quote from Juice Automotive. Mobile mechanic service across the Rio Grande Valley. Call, WhatsApp, or send a message." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="book">
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand">
+        <img src="assets/logo.png" alt="Juice Automotive" />
+        <span class="brand-text">
+          <span class="brand-mark">Juice</span>
+          <span class="brand-sub">Automotive</span>
+        </span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-nav="home" data-en="Home" data-es="Inicio">Home</a></li>
+        <li><a href="services.html" data-nav="services" data-en="Services" data-es="Servicios">Services</a></li>
+        <li><a href="about.html" data-nav="about" data-en="About" data-es="Nosotros">About</a></li>
+      </ul>
+      <a href="book.html" class="nav-cta" data-en="Get in touch" data-es="Contáctenos">Get in touch</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-backdrop" id="navBackdrop"></div>
+  <aside class="nav-panel" id="navPanel">
+    <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+    <a href="services.html" data-en="Services" data-es="Servicios">Services</a>
+    <a href="about.html" data-en="About" data-es="Nosotros">About</a>
+    <a href="book.html" class="panel-cta" data-en="Get in touch" data-es="Contáctenos">Get in touch</a>
+  </aside>
+
+  <header class="hero hero--page">
+    <div class="container">
+      <div class="hero-content">
+        <span class="eyebrow" data-en="Get In Touch" data-es="Contáctenos">Get In Touch</span>
+        <h1 data-en="Request A Free Quote" data-es="Pida Una Cotización Gratis">Request A Free Quote</h1>
+        <p data-en="Tell us about your vehicle and we will get right back to you." data-es="Cuéntenos sobre su vehículo y le responderemos enseguida.">Tell us about your vehicle and we will get right back to you.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="book-layout">
+
+        <!-- FORM -->
+        <div class="form-shell">
+          <h2 style="font-size:2rem; margin-bottom:6px;" data-en="Send A Request" data-es="Enviar Una Solicitud">Send A Request</h2>
+          <p style="color:var(--ink-soft); margin-bottom:26px;" data-en="No obligation. We will reply with next steps and a quote." data-es="Sin compromiso. Le responderemos con los siguientes pasos y una cotización.">No obligation. We will reply with next steps and a quote.</p>
+
+          <form id="bookForm" action="https://formspree.io/f/YOUR_FORMSPREE_ENDPOINT_HERE" method="POST">
+            <input type="hidden" name="_subject" value="New quote request from Juice Automotive website" />
+            <input type="hidden" name="_next" value="thank-you.html" />
+
+            <div class="field-row">
+              <div class="field">
+                <label for="name" data-en="Name" data-es="Nombre">Name</label>
+                <input type="text" id="name" name="name" required data-en-ph="Your name" data-es-ph="Su nombre" placeholder="Your name" />
+              </div>
+              <div class="field">
+                <label for="phone" data-en="Phone" data-es="Teléfono">Phone</label>
+                <input type="tel" id="phone" name="phone" required data-en-ph="Best number to reach you" data-es-ph="Mejor número para localizarlo" placeholder="Best number to reach you" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="email" data-en="Email (optional)" data-es="Correo (opcional)">Email (optional)</label>
+              <input type="email" id="email" name="email" data-en-ph="you@email.com" data-es-ph="usted@correo.com" placeholder="you@email.com" />
+            </div>
+
+            <div class="field">
+              <label for="vehicle" data-en="Vehicle (year, make, model)" data-es="Vehículo (año, marca, modelo)">Vehicle (year, make, model)</label>
+              <input type="text" id="vehicle" name="vehicle" data-en-ph="2017 Ford Fusion" data-es-ph="2017 Ford Fusion" placeholder="2017 Ford Fusion" />
+            </div>
+
+            <div class="field">
+              <label for="service" data-en="Service needed" data-es="Servicio que necesita">Service needed</label>
+              <select id="service" name="service">
+                <option value="" data-en="Select a service" data-es="Seleccione un servicio">Select a service</option>
+                <option value="Engine" data-en="Engine Repair / Performance" data-es="Reparación / Rendimiento Del Motor">Engine Repair / Performance</option>
+                <option value="Transmission" data-en="Transmission / Drivetrain" data-es="Transmisión / Tren Motriz">Transmission / Drivetrain</option>
+                <option value="Brakes" data-en="Brake System" data-es="Sistema De Frenos">Brake System</option>
+                <option value="Suspension" data-en="Suspension / Steering" data-es="Suspensión / Dirección">Suspension / Steering</option>
+                <option value="AC" data-en="Heating / Air Conditioning" data-es="Calefacción / Aire Acondicionado">Heating / Air Conditioning</option>
+                <option value="Electrical" data-en="Electrical / Electronics" data-es="Eléctrico / Electrónica">Electrical / Electronics</option>
+                <option value="Cooling" data-en="Cooling System" data-es="Sistema De Enfriamiento">Cooling System</option>
+                <option value="Fuel" data-en="Fuel / Emissions" data-es="Combustible / Emisiones">Fuel / Emissions</option>
+                <option value="Diesel" data-en="Diesel Repair" data-es="Reparación Diésel">Diesel Repair</option>
+                <option value="Maintenance" data-en="Preventative Maintenance" data-es="Mantenimiento Preventivo">Preventative Maintenance</option>
+                <option value="Other" data-en="Other / Not Sure" data-es="Otro / No Estoy Seguro">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="message" data-en="What is it doing?" data-es="¿Qué está haciendo?">What is it doing?</label>
+              <textarea id="message" name="message" required data-en-ph="Describe the problem, sounds, warning lights, when it started..." data-es-ph="Describa el problema, ruidos, luces de advertencia, cuándo comenzó..." placeholder="Describe the problem, sounds, warning lights, when it started..."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="location" data-en="Your city" data-es="Su ciudad">Your city</label>
+              <input type="text" id="location" name="location" data-en-ph="McAllen, Edinburg, Pharr..." data-es-ph="McAllen, Edinburg, Pharr..." placeholder="McAllen, Edinburg, Pharr..." />
+            </div>
+
+            <button type="submit" class="btn btn--primary" style="width:100%;" data-en="Send Request" data-es="Enviar Solicitud">Send Request</button>
+          </form>
+        </div>
+
+        <!-- CONTACT PANEL -->
+        <aside class="contact-panel">
+          <h3 data-en="Reach Juice Directly" data-es="Comuníquese Con Juice">Reach Juice Directly</h3>
+
+          <div class="contact-item">
+            <div class="ci-ico" aria-hidden="true">&#9742;</div>
+            <div>
+              <div class="ci-label" data-en="Call or Text" data-es="Llamada o Texto">Call or Text</div>
+              <a class="ci-value" href="tel:+19568846303">(956) 884-6303</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ci-ico" aria-hidden="true">&#128172;</div>
+            <div>
+              <div class="ci-label">WhatsApp</div>
+              <a class="ci-value" href="https://wa.me/19568846303">+1 956-884-6303</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ci-ico" aria-hidden="true">&#9993;</div>
+            <div>
+              <div class="ci-label">Messenger</div>
+              <a class="ci-value" href="https://m.me/JuiceAutomotive" data-en="Message on Facebook" data-es="Mensaje en Facebook">Message on Facebook</a>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ci-ico" aria-hidden="true">&#128205;</div>
+            <div>
+              <div class="ci-label" data-en="We Come To You" data-es="Vamos Hacia Usted">We Come To You</div>
+              <div class="ci-value" style="font-size:0.98rem; font-weight:500;">McAllen, Edinburg, Pharr, Weslaco, Donna, San Juan</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="ci-ico" aria-hidden="true">&#9889;</div>
+            <div>
+              <div class="ci-label" data-en="Credentials" data-es="Credenciales">Credentials</div>
+              <div class="ci-value" style="font-size:0.98rem; font-weight:500;" data-en="ASE Certified, Infiniti Senior Specialist" data-es="Certificado ASE, Especialista Sénior Infiniti">ASE Certified, Infiniti Senior Specialist</div>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-mark">Juice Automotive</span>
+          <p data-en="ASE Certified mobile mechanic serving the Rio Grande Valley. Dealership-level repair, brought to your door." data-es="Mecánico móvil Certificado ASE al servicio del Valle del Río Grande. Reparación de nivel concesionario, llevada a su puerta.">ASE Certified mobile mechanic serving the Rio Grande Valley. Dealership-level repair, brought to your door.</p>
+        </div>
+        <div>
+          <h4 data-en="Explore" data-es="Explorar">Explore</h4>
+          <ul>
+            <li><a href="index.html" data-en="Home" data-es="Inicio">Home</a></li>
+            <li><a href="services.html" data-en="Services" data-es="Servicios">Services</a></li>
+            <li><a href="about.html" data-en="About" data-es="Nosotros">About</a></li>
+            <li><a href="book.html" data-en="Get in touch" data-es="Contáctenos">Get in touch</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-en="Contact" data-es="Contacto">Contact</h4>
+          <div class="footer-contact">
+            <div><a href="tel:+19568846303">(956) 884-6303</a></div>
+            <div><a href="https://wa.me/19568846303">WhatsApp</a></div>
+            <div><a href="https://m.me/JuiceAutomotive">Messenger</a></div>
+          </div>
+        </div>
+        <div>
+          <h4 data-en="Service Area" data-es="Área De Servicio">Service Area</h4>
+          <ul>
+            <li>McAllen</li><li>Edinburg</li><li>Pharr</li>
+            <li>Weslaco</li><li>Donna</li><li>San Juan</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Juice Automotive. <span data-en="All rights reserved." data-es="Todos los derechos reservados.">All rights reserved.</span></span>
+        <div class="footer-social">
+          <a href="https://facebook.com/JuiceAutomotive" aria-label="Facebook">f</a>
+          <a href="https://wa.me/19568846303" aria-label="WhatsApp">W</a>
+        </div>
+      </div>
+      <div class="footer-bottom" style="border-top:none; margin-top:8px; justify-content:center;">
+        <span class="otm-credit"><a href="https://otm-designs.com">Built by OTM Web Design</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+    <span aria-hidden="true">&#127760;</span><span class="lang-label">Español</span>
+  </button>
+  <a href="tel:+19568846303" class="call-bar" data-en="Call Juice Now" data-es="Llamar A Juice Ahora">Call Juice Now</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
